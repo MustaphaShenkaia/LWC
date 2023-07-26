@@ -1,0 +1,68 @@
+<template>
+
+    <lightning-card  title="List for:each">
+        <p> ŞEHİRLER -> {sehirList} </p>
+        <p>*************************</p>
+        <template for:each={sehirList} for:item="sehir">
+            <p key={sehir}>  ŞEHİR => {sehir} </p>
+        </template>
+    </lightning-card>
+
+
+    <hr>
+
+
+    <lightning-card  title="List iterator">
+        <p> ŞEHİRLER -> {sehirList} </p>
+        <p>*************************</p>
+        <template iterator:it={sehirList}>
+            <p key={it.value}>  ŞEHİR => {it.value} </p>
+        </template>
+    </lightning-card>
+
+
+    <hr>
+
+
+    <lightning-card  title="List iterator Methods">
+        <p> ŞEHİRLER -> {sehirList} </p>
+        <p>*************************</p>
+        <template iterator:it={sehirList}>
+            <h1 key={it.value} if:true={it.first}> Türkiye'nin Şehirleri </h1>
+            <p key={it.value}>  ŞEHİR => {it.value} </p>
+            <!-- Sıralamanın önemi vardır.  -->
+            <h1 key={it.value} if:true={it.last}> Teşekkür ederim </h1>
+        </template>
+    </lightning-card>
+
+
+    <hr>
+
+
+    <lightning-card  title="Object for:each">
+        <p> ÇİÇEK LİSTESİ -> {cicekListesi} </p>
+        <p>*********************************</p>
+        <template for:each={cicekListesi} for:item="cicek">
+            <p key={cicek.id}>  {cicek.name} </p>
+            <p key={cicek.id}>  {cicek.familya} </p>
+            <img key={cicek.id} src={cicek.imgUrl} alt={cicek.name} width="600">
+        </template>
+    </lightning-card>
+
+
+    <hr>
+
+
+    <lightning-card  title="Object Iteration LIST Yontemi">
+        <p> ÇİÇEK LİSTESİ -> {cicekListesi} </p>
+        <p>*********************************</p>
+        <template for:each={cicekListesi} for:item="cicek">
+            <ol key={cicek.id}>
+                <li>{cicek.name}</li>   
+                <li>{cicek.familya} </li> 
+                <li><img src={cicek.imgUrl} alt={cicek.name} width="600"></li>
+            </ol>            
+        </template>
+    </lightning-card>
+
+</template>
