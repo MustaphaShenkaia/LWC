@@ -1,0 +1,45 @@
+<template>
+
+    <lightning-card  title="Conditional Rendering">
+
+        <lightning-input 
+            type="checkbox" 
+            label="Flag Değiştir" 
+            name="input1"
+            checked={flag}
+            onchange={handlerCheckbox}>
+        </lightning-input> <br>
+
+        <template if:true={flag}>
+            <p> FLAG -> <b>TRUE</b></p>
+        </template>
+
+        <template if:false={flag}>
+            <p> FLAG -> <b>FALSE</b></p>
+        </template>
+    </lightning-card>
+
+
+    <hr>
+
+
+    <lightning-card title="Conditional Rendering Password Example">
+
+        <lightning-input 
+            type="text" 
+            label="Parola Girin" 
+            name="input1"
+            checked={bayrak}
+            onchange={handlerInput}>
+        </lightning-input> <br><br>
+
+        <template if:true={bayrak}>
+            <p> ŞİFRE -> <b style="color: green;">DOĞRU</b></p>
+        </template>
+
+        <template if:false={bayrak}>
+            <p> ŞİFRE -> <b style="color: red;"> YANLIŞ </b></p>
+        </template>
+        
+    </lightning-card>
+</template>
