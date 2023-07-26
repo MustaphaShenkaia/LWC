@@ -1,0 +1,53 @@
+<template>
+
+    <lightning-card  title="Data Binding Tek Yön">
+        <h1> Benim adım {name} </h1>
+    </lightning-card>
+
+    <br>
+
+    <lightning-card  title="Data Binding Çift Yön">
+        <lightning-input 
+            type="text" 
+            label="İsminizi girin: "
+            onchange={handlerName}>
+        </lightning-input>
+        Benim adım: <b>{ad}</b>
+    </lightning-card>
+
+    <br>
+
+    <lightning-card  title="Full İsim Oluşturma">
+        <lightning-input 
+            type="text" 
+            label="İsminizi girin: "
+            onchange={handleFirstName}>
+        </lightning-input>
+
+        <lightning-input 
+            type="text" 
+            label="Soyisminizi girin: "
+            onchange={handlerLastName}>
+        </lightning-input>
+
+        <p> benim full adim {tumIsim} </p>
+    </lightning-card>
+
+    <br>
+
+    <lightning-card  title="2 Sayının Toplamı">
+        <lightning-input 
+            type="number" 
+            label="Sayı girin: "
+            onchange={handleNumberA}>
+        </lightning-input>
+
+        <lightning-input 
+            type="number" 
+            label="Sayı girin: "
+            onchange={handleNumberB}>
+        </lightning-input>
+        
+        <p> Toplam: <b>{topla}</b> </p>
+    </lightning-card>
+</template>
