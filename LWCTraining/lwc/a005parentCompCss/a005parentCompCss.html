@@ -1,8 +1,30 @@
 <template>
     <lightning-card title="Parent Component">
-        <h1>Burası Parent Component</h1>
-        <p>Burası parent P tagı</p>
-        <hr>
+
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-large-size_8-of-12">
+                <div class="slds-box">
+                    <h1>BURASI PARENT H1 TAG</h1>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
+                <div class="slds-box">
+                    <p>BURASI PARENT P TAG</p>
+                </div>
+            </div>
+        </div>
+
         <c-a005child-comp></c-a005child-comp>
+
     </lightning-card>
+
+    <lightning-combobox name="Accounts"
+                        label="Select Account"
+                        options={options}
+                        value={value}
+                        onchange={handleonchange}
+                        >
+    </lightning-combobox>
+
+    <p>The selected value is : <b>{value}</b></p> 
 </template>

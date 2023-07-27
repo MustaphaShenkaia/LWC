@@ -1,0 +1,9 @@
+h1 {
+    color: blue; 
+}
+/* c-a005child-comp {
+    color: red;
+} */
+c-a005child-comp {
+    --guzenRengi: red; 
+} 
