@@ -1,0 +1,25 @@
+<template>
+  <lightning-card title="Data Binding ( cift yon)">
+    
+    <lightning-input
+      type="text"
+      label="Adınızı Giriniz"
+      onchange={handleIsim}
+    ></lightning-input>
+
+    <lightning-input
+      type="text"
+      label="Soyadınızı Giriniz"
+      onchange={handleSoyisim}
+    ></lightning-input>
+    <br>
+    
+    <h1>Benim Adım: <b>{ad}</b></h1>
+    <h1>Benim Adım: <b>{soyad}</b></h1>
+
+    <br>
+
+    <h1>Benim Adım: <b>{fullIsim.name}</b></h1>
+    <h1>Benim Soyadım: <b>{fullIsim.lastname}</b></h1>
+  </lightning-card>
+</template>

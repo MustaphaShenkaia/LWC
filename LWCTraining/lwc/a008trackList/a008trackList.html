@@ -1,0 +1,35 @@
+<template>
+    <lightning-card>
+
+        <lightning-input
+            type="text"
+            label="Çiçek Adı Giriniz"
+            onchange={handleName}
+        ></lightning-input>
+
+        <lightning-input
+            type="text"
+            label="Çiçek Familyası Giriniz"
+            onchange={handleFamilya}
+        ></lightning-input>
+
+        <lightning-button 
+            variant="brand" 
+            label="Çiçek Ekle" 
+            title="Çiçek Ekle" 
+            onclick={handleClick} 
+            class="slds-m-left_x-small"
+            ></lightning-button>
+        <br><br>
+
+        <template for:each={cicekListesi} for:item="cicek">
+            <ol key={cicek.id}>
+                <li>Çiçek Adı: {cicek.id} </li>
+                <li>Çiçek Adı: {cicek.name} </li>
+                <li>Çiçek Familyası: {cicek.familya} </li>
+                <li><br></li>
+            </ol>
+        </template>
+        
+    </lightning-card>
+</template>

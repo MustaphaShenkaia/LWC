@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="SLOT">
+        <h1>PARENT SLOT</h1>
+        <br>
+        <c-a007child-slot 
+            parent-bilgi = 'NASILSIN'  
+        >
+            <h1>Baba çocuğa para verecek UNNAMED SLOT</h1>
+            <h1 slot="iyiNiyetli">Baba nasihat verecek NAMED SLOT</h1>
+       </c-a007child-slot>
+    </lightning-card>
+</template>
+

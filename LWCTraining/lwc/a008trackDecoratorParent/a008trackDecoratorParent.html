@@ -1,0 +1,23 @@
+<template>
+  <lightning-card title="Data Binding ( cift yon)">
+
+    <lightning-input
+      type="text"
+      label="Adınızı Giriniz"
+      onchange={handleIsim}
+    ></lightning-input>
+
+    <lightning-input
+      type="text"
+      label="Soyadınızı Giriniz"
+      onchange={handleSoyisim}
+    ></lightning-input>
+    <br>
+
+    <c-a008track-decorator-object
+        ad = {isim}
+        soyad = {soyisim} 
+    ></c-a008track-decorator-object>
+
+  </lightning-card>
+</template>

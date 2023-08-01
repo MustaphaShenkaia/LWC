@@ -9,6 +9,7 @@ export default class A002DataBinding extends LightningElement {
 
     handlerName(e) {
         this.ad = e.target.value; 
+        // console.log('Render edildi..');
     }
 
     //------------------------

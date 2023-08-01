@@ -1,0 +1,87 @@
+<template>
+  <lightning-card title="Component Composition">
+
+    <h1>ARABA</h1>
+
+    <h1>Araba Modeli =  <b>{arabaModeli}</b> </h1>
+    <lightning-input
+      type="text"
+      label="Araba Seç"
+      onchange={handleAraba}
+    ></lightning-input>
+    <br />
+
+    <lightning-input
+      type="text"
+      label="Motor Cinsi Seç"
+      onchange={handleMotorCinsi}
+    ></lightning-input>
+    <br />
+
+    <lightning-input
+      type="number"
+      name="input1"
+      label="Motor Hacmi Seç"
+      onchange={handleMotorHacmi}
+    ></lightning-input>
+    <br />
+
+
+    <c-a006motor-cinsi
+      motor-cinsi={motorCinsi}
+      motor-hacmibaba={motorHacmi}
+      motor-gucubaba="200"
+      yakit-turubaba="ELEKTRIK"
+    >
+    </c-a006motor-cinsi>
+  </lightning-card>
+ 
+  
+
+  <hr>
+
+
+
+  <lightning-card title="">
+    <div class="slds-grid slds-gutters">
+      <div class="slds-col">
+        
+        <lightning-combobox
+            name="progress"
+            label="Araba Modeli"
+            value={arabaModeli}
+            placeholder="Select Progress"
+            options={arabaModels}
+            onchange={handleArabaModel} 
+            ></lightning-combobox>
+
+            <lightning-combobox
+            name="progress"
+            label="Motor Cinsi"
+            value={motorCinsi}
+            placeholder="Select Progress"
+            options={motorCinsiData}
+            onchange={handleArabaCinsi} 
+            ></lightning-combobox>
+
+            <lightning-combobox
+            name="progress"
+            label="Motor Hacmi"
+            value={motorHacmi}
+            placeholder="Select Progress"
+            options={arabaMotorHacmi}
+            onchange={handleArabaMotorHacmi} 
+            ></lightning-combobox>
+            
+      </div>
+
+      <div class="slds-col">
+        <br>
+        <p>Araba Modeli: <b>{arabaModeli}</b></p>
+        <p>Motor Cinsi: <b>{motorCinsi}</b></p>
+        <p>Motor Hacmi: <b>{motorHacmi}</b></p>
+      </div>
+
+    </div>
+  </lightning-card>
+</template>
