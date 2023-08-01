@@ -1,0 +1,17 @@
+<template>
+    <lightning-combobox
+      name="parentCombobox"
+      label="Parent Combobox"
+      value={selectedParentValue}
+      options={parentOptions}
+      onchange={handleParentChange}
+    ></lightning-combobox>
+  
+    <lightning-combobox
+      name="dependentCombobox"
+      label="Dependent Combobox"
+      value={selectedDependentValue}
+      options={dependentOptions}
+    ></lightning-combobox>
+  </template>
+  
