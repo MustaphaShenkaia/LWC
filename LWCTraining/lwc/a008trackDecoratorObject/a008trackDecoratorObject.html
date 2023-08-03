@@ -12,6 +12,13 @@
       label="Soyadınızı Giriniz"
       onchange={handleSoyisim}
     ></lightning-input>
+
+    <lightning-input
+      type="text"
+      label="Yaş Giriniz"
+      onchange={handleAge}
+    ></lightning-input>
+
     <br>
     
     <h1>Benim Adım: <b>{ad}</b></h1>
@@ -20,6 +27,6 @@
     <br>
 
     <h1>Benim Adım: <b>{fullIsim.name}</b></h1>
-    <h1>Benim Soyadım: <b>{fullIsim.lastname}</b></h1>
+    <h1>Benim Yaşım: <b>{fullIsim.age}</b></h1>
   </lightning-card>
 </template>

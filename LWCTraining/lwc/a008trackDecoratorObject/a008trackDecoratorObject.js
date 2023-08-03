@@ -7,8 +7,8 @@ export default class A008trackDecorator extends LightningElement {
   @api soyad = "Güzel"; 
 
   @track fullIsim = {
-    name: this.ad, 
-    lastname: this.soyad
+    name: '',
+    age: 10
   }
 
   // @api ve @track ile parent üzerinden reactive edilebilir. 
@@ -24,7 +24,11 @@ export default class A008trackDecorator extends LightningElement {
   handleSoyisim(event) {
     // eslint-disable-next-line @lwc/lwc/no-api-reassignments
     this.soyad = event.target.value;
-    this.fullIsim.lastname = event.target.value;
+    //this.fullIsim.age = event.target.value;
+  }
+
+  handleAge(event) {
+    this.fullIsim.age = event.target.value;
   }
 
 }

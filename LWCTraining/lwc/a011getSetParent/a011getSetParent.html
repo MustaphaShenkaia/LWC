@@ -1,0 +1,44 @@
+<template>
+    <lightning-card title="Primitive Data Transfer">
+        <h1>BURASI PARENT</h1>
+        <br>
+        <lightning-input
+            type="number"
+            label="Yaşınızı Girin"
+            onblur={handleYas}
+        ></lightning-input>
+
+        <p>===================</p>
+
+        <c-a011get-set-child-primitve
+            gelen-yas = {yas}
+            dogum-yili-get-set = {yas}
+            >            
+        </c-a011get-set-child-primitve>
+
+    </lightning-card>
+
+
+    <br>
+
+
+    <lightning-card title="Object Data Transfer">
+
+        <lightning-input 
+            type="text" 
+            label="Ad Giriniz"
+            onchange={handleName}
+        ></lightning-input>
+
+        <lightning-input 
+            type="number" 
+            name="input1" 
+            label="Yaş giriniz" 
+            onchange={handleAge}
+        ></lightning-input>
+        <br>
+        <c-a011set-child-object
+            child-customer = {customer}
+        ></c-a011set-child-object>
+    </lightning-card>
+</template>
