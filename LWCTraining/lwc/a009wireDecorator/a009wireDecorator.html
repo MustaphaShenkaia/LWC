@@ -1,0 +1,87 @@
+<template>
+
+
+    <!-- LIST KULLANIMI -->
+
+    <lightning-card title="Wire Decorator">
+
+        <template for:each={accounts.data} for:item="acc">
+            <p key={acc.Id}> {acc.Id} - {acc.Name} </p>
+        </template>
+
+    </lightning-card>
+    <hr>
+
+
+    <!-- FILTRE KULLANIMI - 1  -->
+
+    <lightning-card title="Wire Filter 1">
+
+        <lightning-input
+        type="text"
+        label="Account Getir"
+        onchange={handleAccount}
+        >
+        </lightning-input>
+
+        <template for:each={accountFilterList.data} for:item="acc">
+            <p key={acc.Id}> {acc.Id} - {acc.Name} </p>
+        </template>
+        
+    </lightning-card>
+    <hr>
+
+
+    <!-- FILTRE KULLANIMI - 2  -->
+
+    <lightning-card title="Wire Filter 2">
+
+        <lightning-input
+        type="text"
+        label="Account Getir"
+        onchange={handleAccountIKI}
+        >
+        </lightning-input>
+
+        <!-- Burada conditional rendering yapılabilir. if:true / if:false  -->
+        <!-- Yani dataList varsa şunu göster, error varsa şunu göster.   -->        
+        <template for:each={dataList} for:item="acc">
+            <p key={acc.Id}> {acc.Id} - {acc.Name} </p>
+        </template>
+        
+    </lightning-card>
+    <hr>
+
+
+    <!-- Imperatively Kullanımı  -->
+
+    <lightning-card title="Imparative List">
+
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_2-of-3">
+                <lightning-input
+                type="text"
+                label="Account Getir"
+                onchange={handleImperative}
+                >
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <br>
+                <lightning-button 
+                variant="success" 
+                label="Account Getir" 
+                title="Account Getir" 
+                onclick={handleAccountImperative} 
+                class="slds-m-left_x-small">
+            </lightning-button>
+            </div>
+        </div>
+
+        <template for:each={imperativeList} for:item="acc">
+            <p key={acc.Id}> {acc.Id} - {acc.Name} </p>
+        </template>
+
+    </lightning-card>
+
+</template>
