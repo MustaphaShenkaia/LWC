@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Parent Event Listener HTML">
+        <p>PARENT COMPONENT</p>
+        <p>Click Sayısı -> <strong>{clickSayisi}</strong> </p>
+        <br>
+    
+        <!-- Child üzerinde click event gerçekleşirse -->
+        <c-a014event-listener-html
+            onclick={handleClick}
+        ></c-a014event-listener-html>
+    </lightning-card>
+
+    <hr>
+
+    <lightning-card title="Parent Event Listener JS">
+        <p>PARENT COMPONENT</p>            
+        <br>
+        <c-a014event-listener-js
+        ></c-a014event-listener-js>
+    </lightning-card>
+</template>
