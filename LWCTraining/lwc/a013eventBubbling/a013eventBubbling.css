@@ -1,0 +1,20 @@
+.outer {
+    background-color: blueviolet;
+    height: 300px;
+    width: 300px;
+    border: 2px solid;
+}
+
+.middle {
+    background-color: aqua; 
+    height: 200px;
+    width: 200px;
+    border: 2px solid;
+}
+
+.inner {
+    background-color: cornflowerblue; 
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+}
