@@ -1,0 +1,50 @@
+<template>
+
+    <lightning-card title="Custom Event Create"> 
+
+        <p>PARENT</p>
+        <br>
+
+        <c-a015custom-child-bir
+            onelma={handleElma}
+        ></c-a015custom-child-bir>
+        <br>
+        <p>Bu bilgi -> <b>{yeniBilgi}</b></p>
+
+    </lightning-card>
+
+
+    <br>
+
+
+    <lightning-card title="Custom Event Primitive Data"> 
+
+        <p>PARENT</p>
+        <br>
+
+        <c-a015custom-child-Iki
+            onarmut={handleArmut}
+        ></c-a015custom-child-Iki>
+        <br>
+        <p>Bu bilgi -> <b>{yeniPrimitiveData}</b></p>
+
+    </lightning-card>
+
+
+    <br>
+    
+
+    <lightning-card title="Custom Event Object Data"> 
+
+        <p>PARENT</p>
+        <br>
+
+        <c-a015custom-child-Uc
+            onayva={handleAyva}
+        ></c-a015custom-child-Uc>
+        <br>
+        <p>Childdan gelen Object Name -> <b>{yeniObjectData.name}</b></p>
+        <p>Childdan gelen Object Yaş -> <b>{yeniObjectData.yas}</b></p>
+    </lightning-card>
+
+</template>
