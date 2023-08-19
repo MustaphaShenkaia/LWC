@@ -1,0 +1,29 @@
+<template>
+    <lightning-card variant="base" title="Sibling Communation"> 
+
+        <p>Büyük Abi</p>
+
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input 
+                type="text" 
+                label="Enter your name"
+                onchange={handleName}
+            ></lightning-input>
+            <lightning-input 
+                type="number" 
+                name="input1" 
+                label="Enter your age" 
+                onchange={handleAge}
+            ></lightning-input>
+        </div>
+
+        <lightning-button 
+            variant="brand" 
+            label="Yayinla" 
+            title="Yayını Başlat" 
+            onclick={handleClick} 
+            class="slds-m-left_x-small"
+        ></lightning-button>
+
+    </lightning-card>
+</template>

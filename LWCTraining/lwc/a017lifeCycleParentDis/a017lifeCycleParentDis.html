@@ -1,0 +1,26 @@
+<template>
+
+    <lightning-card>
+        <template if:true={flag}>
+            <c-a017life-cycle-child></c-a017life-cycle-child>
+        </template>
+        
+        <lightning-button 
+            variant="brand" 
+            label="EKLE" 
+            title="Primary action" 
+            onclick={handleEkle} 
+            class="slds-m-left_x-small"
+        ></lightning-button>
+
+        <lightning-button 
+            variant="destructive" 
+            label="ÇIKART" 
+            title="Destructive action" 
+            onclick={handleCikart} 
+            class="slds-m-left_x-small"
+        ></lightning-button>
+
+    </lightning-card>
+    
+</template>

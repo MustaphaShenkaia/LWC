@@ -1,0 +1,28 @@
+<template>
+
+    <lightning-card title="Life Cycle of LWC">
+        
+        <p>Burası Parent</p>
+
+        <h3>İsim -> {isim} </h3>
+        <h3>Sayı -> {sayi} </h3> <br> <br>
+
+        <lightning-input
+            type="text"
+            label="İsim Giriniz: "
+            onchange={handleIsim}
+        ></lightning-input>
+
+        <template for:each={accountList} for:item="acc" >
+            <ul key={acc.id}>
+                <li>Account Id: {acc.Id} </li>
+                <li>Account Id: {acc.Name} </li>
+            </ul>
+        </template>
+        <br>
+        <c-a017life-cycle-child
+        ></c-a017life-cycle-child>
+
+    </lightning-card>
+    
+</template>
